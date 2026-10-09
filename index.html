@@ -101,7 +101,7 @@
         <a href="#experience"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></a>
         <a href="#research"><span class="en">Research</span><span class="vi">Nghiên cứu</span></a>
         <a href="#writing"><span class="en">Writing</span><span class="vi">Bài viết</span></a>
-        <a href="#tools"><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></a>
+        <a href="#clients"><span class="en">Clients</span><span class="vi">Khách hàng</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
       </div>
       <div class="lang-switch" role="group" aria-label="Language">
@@ -118,7 +118,7 @@
     <a href="#experience"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></a>
     <a href="#research"><span class="en">Research</span><span class="vi">Nghiên cứu</span></a>
     <a href="#writing"><span class="en">Writing</span><span class="vi">Bài viết</span></a>
-    <a href="#tools"><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></a>
+    <a href="#clients"><span class="en">Clients</span><span class="vi">Khách hàng</span></a>
     <a href="#contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
   </div>
 </nav>
@@ -377,34 +377,10 @@
   </div>
 </section>
 
-<section id="tools">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></h2></div>
-    <p class="sec-sub"><span class="en">Tools I use and recommend, plus short notes on what's new in technology.</span>
-    <span class="vi">Các công cụ tôi sử dụng và khuyên dùng, cùng ghi chú ngắn về công nghệ mới.</span></p>
-    <div class="tool-grid">
-      <div class="tool">
-        <div class="tool-ic">🤖</div>
-        <div><h3><span class="en">AI toolbox</span><span class="vi">Hộp công cụ AI</span></h3>
-        <p><span class="en">Models, notebooks and prompts I actually use for prediction and analysis work.</span><span class="vi">Mô hình, notebook và prompt tôi thực sự dùng cho công việc dự đoán và phân tích.</span></p></div>
-      </div>
-      <div class="tool">
-        <div class="tool-ic">🏭</div>
-        <div><h3><span class="en">Enterprise stack notes</span><span class="vi">Ghi chú hệ thống doanh nghiệp</span></h3>
-        <p><span class="en">Short reviews of ERP, MES and warehouse-automation tooling from real projects.</span><span class="vi">Đánh giá ngắn về công cụ ERP, MES và tự động hóa kho từ các dự án thực tế.</span></p></div>
-      </div>
-      <div class="tool">
-        <div class="tool-ic">📰</div>
-        <div><h3><span class="en">Tech radar</span><span class="vi">Radar công nghệ</span></h3>
-        <p><span class="en">Curated news on AI and enterprise technology, with a one-paragraph take on each.</span><span class="vi">Tin tức chọn lọc về AI và công nghệ doanh nghiệp, kèm nhận định ngắn cho từng tin.</span></p></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="clients">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2><span class="en">Selected Clients</span><span class="vi">Khách hàng tiêu biểu</span></h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2><span class="en">Selected Clients</span><span class="vi">Khách hàng tiêu biểu</span></h2></div>
     <ul class="client-cols">
       <li>Betrimex Joint Stock Corporation <em><span class="en">Consumer</span><span class="vi">Hàng tiêu dùng</span></em></li>
       <li>Bridgestone <em><span class="en">Production</span><span class="vi">Sản xuất</span></em></li>
@@ -486,7 +462,7 @@ function attachTilt(el, max){
 }
 if(!reduceMotion){
   document.querySelectorAll('[data-tilt]').forEach(el=>attachTilt(el, +(el.dataset.tiltMax||10)));
-  document.querySelectorAll('.post, .tool, .chip-group, .edu').forEach(el=>attachTilt(el, 5));
+  document.querySelectorAll('.post, .chip-group, .edu').forEach(el=>attachTilt(el, 5));
   document.querySelectorAll('.stat').forEach(el=>attachTilt(el, 8));
 }
 
@@ -515,7 +491,7 @@ if(!reduceMotion){
 })();
 
 /* ---------- Scroll reveal ---------- */
-const revealTargets = document.querySelectorAll('.sec-head, .sec-sub, .about-grid > div, .chip-group, .t-item, .post, .tool, .edu, .certs, .research-areas, .pub-card, .id-card, .repo-card, .stats, .client-cols, .foot-sub, .foot-links');
+const revealTargets = document.querySelectorAll('.sec-head, .sec-sub, .about-grid > div, .chip-group, .t-item, .post, .edu, .certs, .research-areas, .pub-card, .id-card, .repo-card, .stats, .client-cols, .foot-sub, .foot-links');
 revealTargets.forEach((el,i)=>{ el.classList.add('reveal'); el.style.transitionDelay = (i%4)*70+'ms'; });
 const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });

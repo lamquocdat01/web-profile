@@ -144,14 +144,6 @@ body.page-experience #experience{display:block;border-bottom:none;min-height:60v
 .btn-gold{background:var(--gold);color:#fff;box-shadow:0 10px 24px -8px rgba(185,138,47,.6),inset 0 1px 0 rgba(255,255,255,.25)}
 .btn-gold:hover{background:#a67926;text-decoration:none;box-shadow:0 14px 30px -8px rgba(185,138,47,.7)}
 
-/* Tools & News */
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.tool{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
-.tool:hover{border-color:var(--accent)}
-.tool-ic{width:38px;height:38px;flex:none;border-radius:9px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.tool h3{font-size:.95rem;font-weight:600;margin-bottom:3px}
-.tool p{font-size:.83rem;color:var(--ink-soft)}
-
 /* Clients */
 .client-cols{columns:2;gap:44px;font-size:.93rem;color:var(--ink-soft)}
 @media(max-width:640px){.client-cols{columns:1}}
@@ -262,7 +254,7 @@ body.hero-ready .stats .stat{opacity:1;transform:none}
 .btn-primary{box-shadow:0 8px 22px -8px rgba(14,77,100,.55),inset 0 1px 0 rgba(255,255,255,.18)}
 .btn-primary:hover{box-shadow:0 12px 28px -8px rgba(14,77,100,.6)}
 
-.post:hover,.tool:hover,.chip-group:hover{box-shadow:0 22px 44px -18px rgba(26,37,48,.25)}
+.post:hover,.chip-group:hover{box-shadow:0 22px 44px -18px rgba(26,37,48,.25)}
 .stat b{transition:transform .3s}
 .stat:hover b{transform:scale(1.12)}
 
@@ -293,7 +285,7 @@ footer h2{margin-bottom:12px}
   .about-grid{gap:6px}
   .about-grid p{text-align:left}
   .cta-row .btn{flex:1;justify-content:center}
-  .post,.chip-group,.tool,.edu{padding:20px}
+  .post,.chip-group,.edu{padding:20px}
   .client-cols li{font-size:.88rem}
   .g-item{width:280px;height:168px;margin-right:14px}
   .gallery::before,.gallery::after{width:36px}

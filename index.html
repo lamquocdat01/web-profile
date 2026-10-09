@@ -36,7 +36,9 @@
   "url": "https://lamquocdat.com/",
   "sameAs": [
     "https://www.linkedin.com/in/lam-quoc-dat-8890ab40/",
-    "https://www.udemy.com/user/lam-quoc-dat-3/"
+    "https://www.udemy.com/user/lam-quoc-dat-3/",
+    "https://orcid.org/0009-0004-5432-9343",
+    "https://github.com/lamquocdat01"
   ],
   "alumniOf": [
     {
@@ -97,6 +99,7 @@
       <div class="nav-links">
         <a href="#about"><span class="en">About</span><span class="vi">Giới thiệu</span></a>
         <a href="#experience"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></a>
+        <a href="#research"><span class="en">Research</span><span class="vi">Nghiên cứu</span></a>
         <a href="#writing"><span class="en">Writing</span><span class="vi">Bài viết</span></a>
         <a href="#tools"><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
@@ -113,6 +116,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about"><span class="en">About</span><span class="vi">Giới thiệu</span></a>
     <a href="#experience"><span class="en">Experience</span><span class="vi">Kinh nghiệm</span></a>
+    <a href="#research"><span class="en">Research</span><span class="vi">Nghiên cứu</span></a>
     <a href="#writing"><span class="en">Writing</span><span class="vi">Bài viết</span></a>
     <a href="#tools"><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></a>
     <a href="#contact"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
@@ -260,9 +264,74 @@
   </div>
 </section>
 
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2><span class="en">Research</span><span class="vi">Nghiên cứu</span></h2></div>
+
+    <div class="research-areas">
+      <div class="ra-label"><span class="en">Research areas</span><span class="vi">Lĩnh vực nghiên cứu</span></div>
+      <div class="ra-chips">
+        <span class="ra-chip"><i>01</i>Artificial Intelligence</span>
+        <span class="ra-chip"><i>02</i>Machine Learning</span>
+        <span class="ra-chip"><i>03</i>Deep Learning</span>
+        <span class="ra-chip"><i>04</i>Computer Vision</span>
+        <span class="ra-chip"><i>05</i>Edge AI Computing</span>
+      </div>
+    </div>
+
+    <div class="research-grid">
+      <article class="pub-card">
+        <div class="pub-badges">
+          <span class="pub-badge pub-badge-q1">Q1</span>
+          <span class="pub-badge">IEEE Xplore</span>
+          <span class="pub-badge pub-badge-soft"><span class="en">Peer-reviewed journal article</span><span class="vi">Bài báo tạp chí phản biện</span></span>
+        </div>
+        <h3><a href="https://ieeexplore.ieee.org/document/11721175" target="_blank" rel="noopener">Certifiable Worst-Case Detection Latency for Energy-Efficient Frame-Skipping at the Edge</a></h3>
+        <div class="pub-meta">Dat Lam Quoc · <em>IEEE Internet of Things Journal</em> · <span class="en">Early Access, October 2026</span><span class="vi">Early Access, 10/2026</span><br>DOI: <a href="https://doi.org/10.1109/JIOT.2026.3740931" target="_blank" rel="noopener">10.1109/JIOT.2026.3740931</a></div>
+        <details class="pub-abstract">
+          <summary><span class="en">Abstract</span><span class="vi">Tóm tắt</span></summary>
+          <p>Edge video-analytics systems on Internet-of-Things devices skip the detector on most frames to save energy, but never bound how long a real event can go undetected: they are validated empirically, never certified. We give a framework that makes “safe to skip” provable. We derive a deterministic worst-case bound on missed-event latency for any refresh-bounded policy; we characterize the stochastic latency law under random event phase, uniform latency with a distribution-free miss probability set by the measured duration law, and show surveillance durations are heavy-tailed, so mean-based closed forms badly mispredict misses; and we prove an energy–miss frontier on which periodic refresh is the optimal oblivious policy, pricing certifiability as the energy to guarantee events above a chosen duration. The random-phase assumption can be enforced rather than assumed: a randomized-phase refresh makes the law hold by construction even against adversarially synchronized events, and dependence-robust budgets replace independence. On 121 videos across three datasets the theory holds, and a one-frame off-by-one leaks the certificate exactly where theory predicts, restored by a hard refresh. A deployed motion gate’s advantage at equal energy is marginal and alignment-dependent; we give the correlation threshold a content-aware gate must clear, and find gains obey an alignment–density law from 76% to 1% event density. Measurements across platforms show the energy ratio κ belongs to the stack, not the silicon, spanning 5.9 to 66 on a single board and reaching 269 on a microcontroller, where a platform floor caps absolute savings near 25%, setting the price of certifiability.</p>
+        </details>
+        <div class="pub-actions">
+          <a class="btn btn-primary" href="https://ieeexplore.ieee.org/document/11721175" target="_blank" rel="noopener"><span class="en">Read on IEEE Xplore ↗</span><span class="vi">Đọc trên IEEE Xplore ↗</span></a>
+        </div>
+      </article>
+
+      <div class="research-side">
+        <a class="id-card" href="https://orcid.org/0009-0004-5432-9343" target="_blank" rel="noopener">
+          <span class="id-ic id-orcid" aria-hidden="true"><svg viewBox="0 0 256 256"><circle cx="128" cy="128" r="128" fill="#a6ce39"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"/></svg></span>
+          <span class="id-body">
+            <b>ORCID iD</b>
+            <span>0009-0004-5432-9343</span>
+          </span>
+          <span class="id-arrow">↗</span>
+        </a>
+
+        <div class="repo-card">
+          <div class="repo-head">
+            <span class="id-ic id-github" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></span>
+            <div>
+              <b><span class="en">Research code</span><span class="vi">Mã nguồn nghiên cứu</span></b>
+              <span><span class="en">18 public repositories · reproducible artifacts</span><span class="vi">18 kho mã công khai · artifact tái lập được</span></span>
+            </div>
+          </div>
+          <ul class="repo-list">
+            <li><a href="https://github.com/lamquocdat01/asmag-trc" target="_blank" rel="noopener">asmag-trc</a><em>Edge AI surveillance</em></li>
+            <li><a href="https://github.com/lamquocdat01/deep3-certifiable-frame-skipping" target="_blank" rel="noopener">deep3-certifiable-frame-skipping</a><em>C++ · Edge CV</em></li>
+            <li><a href="https://github.com/lamquocdat01/AwP-frame-scheduling-public" target="_blank" rel="noopener">AwP-frame-scheduling-public</a><em>Frame scheduling</em></li>
+            <li><a href="https://github.com/lamquocdat01/pinwheel-certified-multicamera" target="_blank" rel="noopener">pinwheel-certified-multicamera</a><em>Multi-camera</em></li>
+            <li><a href="https://github.com/lamquocdat01/aoii-detection-certificates" target="_blank" rel="noopener">aoii-detection-certificates</a><em>Detection certificates</em></li>
+          </ul>
+          <a class="repo-all" href="https://github.com/lamquocdat01?tab=repositories" target="_blank" rel="noopener"><span class="en">View all repositories on GitHub ↗</span><span class="vi">Xem tất cả kho mã trên GitHub ↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="writing">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2><span class="en">Writing</span><span class="vi">Bài viết</span></h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2><span class="en">Writing</span><span class="vi">Bài viết</span></h2></div>
     <p class="sec-sub"><span class="en">Long-form articles on AI, enterprise technology and lessons from the field.</span>
     <span class="vi">Các bài viết chuyên sâu về AI, công nghệ doanh nghiệp và bài học thực tiễn.</span></p>
     <div class="post-grid">
@@ -293,7 +362,7 @@
 
 <section id="course">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2><span class="en">My Udemy Course</span><span class="vi">Khóa học Udemy của tôi</span></h2></div>
+    <div class="sec-head"><span class="sec-num">05</span><h2><span class="en">My Udemy Course</span><span class="vi">Khóa học Udemy của tôi</span></h2></div>
     <div class="course-card">
       <div class="course-ic">🎓</div>
       <div class="course-body">
@@ -308,7 +377,7 @@
 
 <section id="tools">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2><span class="en">Tools &amp; News</span><span class="vi">Công cụ &amp; Tin tức</span></h2></div>
     <p class="sec-sub"><span class="en">Tools I use and recommend, plus short notes on what's new in technology.</span>
     <span class="vi">Các công cụ tôi sử dụng và khuyên dùng, cùng ghi chú ngắn về công nghệ mới.</span></p>
     <div class="tool-grid">
@@ -333,7 +402,7 @@
 
 <section id="clients">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2><span class="en">Selected Clients</span><span class="vi">Khách hàng tiêu biểu</span></h2></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2><span class="en">Selected Clients</span><span class="vi">Khách hàng tiêu biểu</span></h2></div>
     <ul class="client-cols">
       <li>Betrimex Joint Stock Corporation <em><span class="en">Consumer</span><span class="vi">Hàng tiêu dùng</span></em></li>
       <li>Bridgestone <em><span class="en">Production</span><span class="vi">Sản xuất</span></em></li>
@@ -444,7 +513,7 @@ if(!reduceMotion){
 })();
 
 /* ---------- Scroll reveal ---------- */
-const revealTargets = document.querySelectorAll('.sec-head, .sec-sub, .about-grid > div, .chip-group, .t-item, .post, .tool, .edu, .certs, .stats, .client-cols, .foot-sub, .foot-links');
+const revealTargets = document.querySelectorAll('.sec-head, .sec-sub, .about-grid > div, .chip-group, .t-item, .post, .tool, .edu, .certs, .research-areas, .pub-card, .id-card, .repo-card, .stats, .client-cols, .foot-sub, .foot-links');
 revealTargets.forEach((el,i)=>{ el.classList.add('reveal'); el.style.transitionDelay = (i%4)*70+'ms'; });
 const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });

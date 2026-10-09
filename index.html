@@ -128,35 +128,37 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="kicker">
-          <span class="en">Digital Transformation · SAP · Enterprise IT</span>
-          <span class="vi">Chuyển đổi số · SAP · CNTT Doanh nghiệp</span>
+        <div class="kicker hero-in" style="--d:60ms">
+          <span class="en">Digital Transformation · SAP · Enterprise IT · AI Research</span>
+          <span class="vi">Chuyển đổi số · SAP · CNTT Doanh nghiệp · Nghiên cứu AI</span>
         </div>
-        <h1>Lam Quoc Dat</h1>
-        <p class="role">
+        <h1 class="hero-in" style="--d:180ms">Lam Quoc <span class="shimmer">Dat</span></h1>
+        <p class="role hero-in" style="--d:300ms">
           <span class="en"><strong>IT Director — Business Solution Delivery</strong></span>
           <span class="vi"><strong>Giám đốc CNTT — Triển khai Giải pháp Kinh doanh</strong></span>
         </p>
-        <p class="tagline">
+        <p class="tagline hero-in" style="--d:420ms">
           <span class="en">Two decades at the intersection of business and technology — sharing what I learn about digital transformation, enterprise systems, and AI.</span>
           <span class="vi">Hai thập kỷ ở giao điểm giữa kinh doanh và công nghệ — chia sẻ những gì tôi học được về chuyển đổi số, hệ thống doanh nghiệp và AI.</span>
         </p>
-        <div class="cta-row">
+        <div class="cta-row hero-in" style="--d:540ms">
           <a class="btn btn-primary" href="#writing"><span class="en">Read my writing</span><span class="vi">Đọc bài viết</span></a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/lam-quoc-dat-8890ab40/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
-      <div class="portrait-wrap">
+      <div class="portrait-wrap hero-pic">
         <div class="tilt" data-tilt data-tilt-max="10">
           <img class="portrait" src="/img/portrait.webp" width="600" height="800" alt="Portrait of Lam Quoc Dat" fetchpriority="high" decoding="async">
           <div class="glare"></div>
         </div>
       </div>
     </div>
-    <div class="stats">
-      <div class="stat"><b>20+</b><span><span class="en">years in business &amp; IT</span><span class="vi">năm kinh nghiệm kinh doanh &amp; CNTT</span></span></div>
-      <div class="stat"><b>20+</b><span><span class="en">full-cycle SAP projects delivered</span><span class="vi">dự án SAP trọn vòng đời</span></span></div>
-      <div class="stat"><b>60</b><span><span class="en">digital transformation initiatives</span><span class="vi">sáng kiến chuyển đổi số</span></span></div>
+    <div class="stats stats-5">
+      <div class="stat" style="--d:0ms"><b>20+</b><span><span class="en">years in business &amp; IT</span><span class="vi">năm kinh nghiệm kinh doanh &amp; CNTT</span></span></div>
+      <div class="stat" style="--d:90ms"><b>20+</b><span><span class="en">full-cycle SAP projects delivered</span><span class="vi">dự án SAP trọn vòng đời</span></span></div>
+      <div class="stat" style="--d:180ms"><b>60</b><span><span class="en">digital transformation initiatives</span><span class="vi">sáng kiến chuyển đổi số</span></span></div>
+      <a class="stat stat-link" style="--d:270ms" href="#research"><b>18</b><span><span class="en">open-source research repos</span><span class="vi">kho mã nghiên cứu mở</span></span><i class="stat-tag">GitHub ↗</i></a>
+      <a class="stat stat-link" style="--d:360ms" href="#research"><b>Q1</b><span><span class="en">IEEE journal publication</span><span class="vi">bài báo tạp chí IEEE</span></span><i class="stat-tag">AI Research ↗</i></a>
     </div>
   </div>
 </header>
@@ -537,7 +539,27 @@ function animateCount(el){
 const statIO = new IntersectionObserver(entries=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.querySelectorAll('b').forEach(animateCount); statIO.unobserve(en.target); } });
 },{threshold:.4});
-if(!reduceMotion) document.querySelectorAll('.stats').forEach(el=>statIO.observe(el));
+document.querySelectorAll('.stats').forEach(el=>statIO.observe(el));
+
+/* ---------- Hero entrance + parallax (JS-driven, chạy cả khi OS bật reduced-motion) ---------- */
+(function(){
+  requestAnimationFrame(()=>document.body.classList.add('hero-ready'));
+  const hero=document.querySelector('.hero'); if(!hero) return;
+  const orbs=[...hero.querySelectorAll('.orb')], pic=hero.querySelector('.hero-pic');
+  let tx=0,ty=0,cx=0,cy=0,raf=null;
+  hero.addEventListener('mousemove',e=>{
+    const r=hero.getBoundingClientRect();
+    tx=(e.clientX-r.left)/r.width-.5; ty=(e.clientY-r.top)/r.height-.5;
+    if(!raf) raf=requestAnimationFrame(tick);
+  });
+  hero.addEventListener('mouseleave',()=>{tx=0;ty=0;if(!raf) raf=requestAnimationFrame(tick);});
+  function tick(){
+    cx+=(tx-cx)*.08; cy+=(ty-cy)*.08;
+    orbs.forEach((o,i)=>{const k=(i+1)*14; o.style.translate=(cx*k)+'px '+(cy*k)+'px';});
+    if(pic) pic.style.translate=(cx*-8)+'px '+(cy*-8)+'px';
+    raf=(Math.abs(tx-cx)>.001||Math.abs(ty-cy)>.001)?requestAnimationFrame(tick):null;
+  }
+})();
 </script>
 </body>
 </html>

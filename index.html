@@ -158,7 +158,7 @@
       <div class="stat" style="--d:90ms"><b>20+</b><span><span class="en">full-cycle SAP projects delivered</span><span class="vi">dự án SAP trọn vòng đời</span></span></div>
       <div class="stat" style="--d:180ms"><b>60+</b><span><span class="en">digital transformation initiatives</span><span class="vi">sáng kiến chuyển đổi số</span></span></div>
       <a class="stat stat-link" style="--d:270ms" href="#research"><b>18+</b><span><span class="en">open-source research repos</span><span class="vi">kho mã nghiên cứu mở</span></span><i class="stat-tag">GitHub ↗</i></a>
-      <a class="stat stat-link" style="--d:360ms" href="#research"><b>Q1</b><span><span class="en">IEEE journal publication</span><span class="vi">bài báo tạp chí IEEE</span></span><i class="stat-tag">AI Research ↗</i></a>
+      <a class="stat stat-link" style="--d:360ms" href="#research"><b>2</b><span><span class="en">Q1 journal publications (IEEE · Elsevier)</span><span class="vi">bài báo tạp chí Q1 (IEEE · Elsevier)</span></span><i class="stat-tag">AI Research ↗</i></a>
     </div>
   </div>
 </header>
@@ -178,8 +178,8 @@
         <span class="vi">Tôi đã dẫn dắt hơn 60 sáng kiến chuyển đổi số và quản lý các hệ thống phức tạp: ERP SAP S/4HANA, Quản lý chuỗi cung ứng, Sản xuất tích hợp (MES) và Kho tự động (ASRS).</span></p>
         <p><span class="en">I bring practical industry insight across Manufacturing, Life Sciences, Engineering &amp; Construction, Retail and Consumer Goods — from enterprise architecture to AI-driven process automation.</span>
         <span class="vi">Tôi mang đến hiểu biết thực tiễn sâu rộng trong các ngành Sản xuất, Dược phẩm, Xây dựng, Bán lẻ và Hàng tiêu dùng — từ kiến trúc doanh nghiệp đến tự động hóa quy trình bằng AI.</span></p>
-        <p><span class="en">Alongside enterprise delivery, I pursue academic research in AI, Machine Learning, Computer Vision, Edge AI and IoT — with work published in IEEE journals and open-sourced on GitHub.</span>
-        <span class="vi">Song song với công việc doanh nghiệp, tôi nghiên cứu học thuật về AI, Học máy, Thị giác máy tính, Edge AI và IoT — với công bố trên tạp chí IEEE và mã nguồn mở trên GitHub.</span></p>
+        <p><span class="en">Alongside enterprise delivery, I pursue academic research in AI, Machine Learning, Computer Vision, Edge AI and IoT — with work published in IEEE and Elsevier journals and open-sourced on GitHub.</span>
+        <span class="vi">Song song với công việc doanh nghiệp, tôi nghiên cứu học thuật về AI, Học máy, Thị giác máy tính, Edge AI và IoT — với công bố trên các tạp chí IEEE, Elsevier và mã nguồn mở trên GitHub.</span></p>
       </div>
     </div>
   </div>
@@ -285,6 +285,25 @@
     </div>
 
     <div class="research-grid">
+      <div class="pub-stack">
+      <article class="pub-card">
+        <div class="pub-badges">
+          <span class="pub-badge pub-badge-q1">Q1</span>
+          <span class="pub-badge">ScienceDirect</span>
+          <span class="pub-badge pub-badge-soft"><span class="en">Peer-reviewed journal article</span><span class="vi">Bài báo tạp chí phản biện</span></span>
+        </div>
+        <h3><a href="https://doi.org/10.1016/j.sysarc.2026.104058" target="_blank" rel="noopener">ASMAG-TRC: A Safety-Arbitrated Runtime Architecture for Adaptive Inference Control on Resource-Constrained Edge AI Cameras</a></h3>
+        <div class="pub-meta">Lam Quoc Dat · <em>Journal of Systems Architecture</em> (Elsevier) · <span class="en">vol. 181, art. 104058, 2026</span><span class="vi">tập 181, bài số 104058, 2026</span><br>DOI: <a href="https://doi.org/10.1016/j.sysarc.2026.104058" target="_blank" rel="noopener">10.1016/j.sysarc.2026.104058</a></div>
+        <details class="pub-abstract">
+          <summary><span class="en">Abstract</span><span class="vi">Tóm tắt</span></summary>
+          <p>Real-time edge AI cameras must run deep-learning detectors locally under strict latency, compute, and energy budgets. Detecting on every frame wastes energy on redundant fixed-camera video, yet naive frame-skipping risks missing safety-critical events. This paper presents ASMAG-TRC, a runtime inference-control architecture that decouples when to run a detector from how to accelerate it, composable with accelerators like quantization and TensorRT. The architecture combines a lightweight motion-proposal layer; a controller hierarchy selecting a per-frame mode (detect, reuse, estimate, or fallback); a pure-function safety-arbitration layer whose three deterministic rule-based invariants, exhaustively checked over their finite input domain, protect event-critical frames without shared mutable state; and a persistent-motion circuit breaker that bounds worst-case energy under sustained activity. We evaluate on four datasets (CDnet2014, BMC, LASIESTA, VIRAT; 131 videos) and on an NVIDIA Jetson Orin Nano with real INA3221 power measurement under a version-pinned stack. On CDnet2014 the guarded controller attains the best accuracy-efficiency score (AE = 0.835) at 43% activation, cutting energy per frame by 36% while improving Event F1 from 0.669 to 0.695; on BMC it reaches Event F1 0.946, surpassing always-on detection (0.938). On the Jetson it cuts energy per frame by 47.5% at 4.5x throughput across all 53 CDnet2014 videos; the circuit breaker holds worst-case high-motion energy below the always-on baseline (328 vs 362 mJ/frame); and with TensorRT FP16 it sustains 130.8 FPS at a 60% energy reduction (351 to 140 mJ), a 2.5x battery-lifetime extension. A 37-hour live deployment confirms 1.62 ms gate overhead; an MIT-licensed implementation is released.</p>
+        </details>
+        <div class="pub-actions">
+          <a class="btn btn-primary" href="https://doi.org/10.1016/j.sysarc.2026.104058" target="_blank" rel="noopener"><span class="en">Read on ScienceDirect ↗</span><span class="vi">Đọc trên ScienceDirect ↗</span></a>
+          <a class="btn" href="https://github.com/lamquocdat01/asmag-trc" target="_blank" rel="noopener"><span class="en">Code on GitHub ↗</span><span class="vi">Mã nguồn trên GitHub ↗</span></a>
+        </div>
+      </article>
+
       <article class="pub-card">
         <div class="pub-badges">
           <span class="pub-badge pub-badge-q1">Q1</span>
@@ -301,6 +320,7 @@
           <a class="btn btn-primary" href="https://ieeexplore.ieee.org/document/11721175" target="_blank" rel="noopener"><span class="en">Read on IEEE Xplore ↗</span><span class="vi">Đọc trên IEEE Xplore ↗</span></a>
         </div>
       </article>
+      </div>
 
       <div class="research-side">
         <a class="id-card" href="https://orcid.org/0009-0004-5432-9343" target="_blank" rel="noopener">
